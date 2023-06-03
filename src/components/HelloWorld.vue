@@ -23,8 +23,8 @@ export default {
   },
   mounted() {
     App.start();
-    Emmitter.on('countdown-end', this.init);
-    this.init();
+    // Emmitter.on('countdown-end', this.init);
+    // this.init();
   },
   methods: {
     
@@ -46,8 +46,6 @@ export default {
 
         this.minutes = String(minutes);
         this.seconds = String(seconds);
-
-        console.log(minutes, seconds)
 
         if (this.currentTime === 0) {
             clearInterval(this.interval);

@@ -5,12 +5,16 @@
 </template>
 
 <script>
+import { swInstaller } from './service/serviceWorkerInstaller';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    swInstaller.init();
   }
 }
 </script>
